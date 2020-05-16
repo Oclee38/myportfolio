@@ -13,14 +13,10 @@
 
 
         <div class="w-5/12 justify-evenly flex text-xl">
-            <a class="{{'text-primary' if active_page == 'index' else '' }} hover:underline hover:text-primary"
-                href="/">Home</a>
-            <a class="{{'text-primary' if active_page == 'about' else '' }} hover:underline hover:text-primary"
-                href="/about">About</a>
-            <a class="{{'text-primary' if active_page == 'projects' else '' }} hover:underline hover:text-primary"
-                href="/projects">Projects</a>
-            <a class="{{'text-primary' if active_page == 'contact' else '' }} hover:underline hover:text-primary"
-                href="/contact">Contact</a>
+            <a class="{{'active' if active_page == 'index' else '' }} link" href="/">Home</a>
+            <a class="{{'active' if active_page == 'about' else '' }} link" href="/about">About</a>
+            <a class="{{'active' if active_page == 'projects' else '' }} link" href="/projects">Projects</a>
+            <a class="{{'active' if active_page == 'contact' else '' }} link" href="/contact">Contact</a>
         </div>
 
     </header>

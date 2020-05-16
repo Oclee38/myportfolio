@@ -595,6 +595,28 @@ video {
   height: auto;
 }
 
+.active{
+  --text-opacity: 1;
+  color: #fc6d1a;
+  color: rgba(252, 109, 26, var(--text-opacity));
+  border-bottom-width: 2px;
+  border-style: double;
+  --border-opacity: 1;
+  border-color: #fc6d1a;
+  border-color: rgba(252, 109, 26, var(--border-opacity));
+}
+
+.link:hover{
+  border-bottom-width: 2px;
+  border-style: double;
+  --border-opacity: 1;
+  border-color: #fc6d1a;
+  border-color: rgba(252, 109, 26, var(--border-opacity));
+  --text-opacity: 1;
+  color: #fc6d1a;
+  color: rgba(252, 109, 26, var(--text-opacity));
+}
+
 .container {
   width: 100%;
 }
@@ -95125,3 +95147,4 @@ video {
     transition-delay: 1000ms;
   }
 }
+
