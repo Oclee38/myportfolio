@@ -3,3 +3,38 @@
 Eelco de Gee | Projects
 {% endblock title %}
 {% set active_page = 'projects'  %}
+
+{% block content %}
+<div class="flex flex-col mb-32">
+
+    <div class="flex justify-evenly ">
+
+        <section class=" text-xs text-center w-1/6 h-64 border-2 border-header p-2 border-double">
+            <img class="border-b border-header pb-2"
+                src="{{ url_for('static', filename='images/projects/proj1_personal_home.png') }}" alt="">
+
+            <p>This website</p>
+            <p>Created for myself and for you</p>
+            <a class="underline" href="/">Go to website</a>
+            <p></p>
+            <a class="underline" href="/">Go Git Repo</a>
+        </section>
+        <section class="text-xs text-center  w-1/6 border-2 border-gray-300 border-double">
+            <img src="{{ url_for('static', filename='images/projects/proj1_personal_home.png') }}" alt="">
+            <p>This website</p>
+            <p>Created for myself and for you</p>
+        </section>
+        <section class="text-xs text-center w-1/6 border-2 border-gray-300 border-double">
+            <img src="{{ url_for('static', filename='images/projects/proj1_personal_home.png') }}" alt="">
+            <p>This website</p>
+            <p>Created for myself and for you</p>
+        </section>
+        <section class="text-xs text-center w-1/6 border-2 border-gray-300 border-double">
+            <img src="{{ url_for('static', filename='images/projects/proj1_personal_home.png') }}" alt="">
+            <p>This website</p>
+            <p>Created for myself and for you</p>
+        </section>
+    </div>
+</div>
+
+{% endblock content %}

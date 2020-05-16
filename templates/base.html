@@ -13,10 +13,12 @@
 
 
         <div class="w-5/12 justify-evenly flex text-xl">
-            <a class="{{'active' if active_page == 'index' else '' }} link" href="/">Home</a>
-            <a class="{{'active' if active_page == 'about' else '' }} link" href="/about">About</a>
-            <a class="{{'active' if active_page == 'projects' else '' }} link" href="/projects">Projects</a>
-            <a class="{{'active' if active_page == 'contact' else '' }} link" href="/contact">Contact</a>
+            <a class="{{'active' if active_page == 'index' else '' }} link" href="{{ url_for('index') }}">Home</a>
+            <a class="{{'active' if active_page == 'about' else '' }} link" href="{{ url_for('about') }}">About</a>
+            <a class="{{'active' if active_page == 'projects' else '' }} link"
+                href="{{ url_for('projects') }}">Projects</a>
+            <a class="{{'active' if active_page == 'contact' else '' }} link"
+                href="{{ url_for('contact') }}">Contact</a>
         </div>
 
     </header>
@@ -28,6 +30,10 @@
     <footer class="flex justify-center items-center bottom-0 static bg-header">
         <p>Copyright Eelco de Gee 2020</p>
     </footer>
+
+    {% block scripts %}
+
+    {% endblock scripts %}
 </body>
 
 </html>

@@ -3,3 +3,31 @@
 Eelco de Gee | Contact
 {% endblock title %}
 {% set active_page = 'contact'  %}
+
+{% block content %}
+<div class="w-4/12">
+
+    <form class="text-xl" action="{{ url_for('sentmail') }}">
+        <div>
+            <label class="text-sm" for="name">Name:</label>
+            <p></p>
+            <input class="w-full" type="text" name="name" placeholder="your name">
+        </div>
+        <div>
+            <label class="text-sm" for="email">Email:</label>
+            <p></p>
+            <input class="w-full" type="email" name="email" placeholder="your email address">
+        </div>
+        <div>
+            <label class="text-sm" for="message">Message:</label>
+            <p></p>
+            <textarea class="w-full" name="message" id="" cols="30" rows="7"></textarea>
+        </div>
+        <div>
+
+            <input type="submit" value="Send mail" class="w-full bg-primary text-body cursor-pointer">
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+Eelco de Gee | Thank you!
+{% endblock title %}
+
+{% block content %}
+<div class="flex flex-col">
+    <h1>Thank you for your email {{name}}</h1>
+    <p>You will get redirected to the homepage soon!</p>
+</div>
+
+{% block scripts %}
+<script>
+    window.setTimeout(function () {
+        window.location.href = '/';
+    }, 5000);
+</script>
+{% endblock scripts %}
+{% endblock content %}
