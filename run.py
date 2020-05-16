@@ -4,19 +4,20 @@ app = Flask(__name__)
 
 
 @app.route('/')
+@app.route('/Home')
 def index():
-    return render_template('basic.html')
+
+    return render_template('home.html')
 
 
 @app.route('/about')
 def about():
-    return '<h1> About us </h1>'
+    return render_template('about.html')
 
 
 @app.route('/user/<user>')
 def users(user):
-
-    return f'<h1>Hello {user.capitalize()} </h1>'
+    return render_template('user.html', user=user)
 
 
 if __name__ == '__main__':

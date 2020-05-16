@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{ url_for('static', filename='css/main.css') }}>
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+
+<body class="bg-body text-secondary tracking-wider text-2xl font-serif flex flex-col min-h-screen">
+    <header class="flex justify-around items-center h-20 w-full bg-header text-gray-300">
+
+
+        <div class="w-5/12 justify-evenly flex text-xl">
+            <a class="{{'text-primary' if active_page == 'index' else '' }}" href="/">Home</a>
+            <a class="{{'text-primary' if active_page == 'about' else '' }}" href="/about">About</a>
+            <a class="{{'text-primary' if active_page == 'projects' else '' }}" href="/">Projects</a>
+            <a class="{{'text-primary' if active_page == 'contact' else '' }}" href="/">Contact</a>
+        </div>
+
+    </header>
+    <main class="flex-grow flex items-center justify-around">
+        {% block content %}
+
+        {% endblock content %}
+    </main>
+    <footer class="flex justify-center items-center bottom-0 static bg-header">
+        <p>Copyright Eelco de Gee 2020</p>
+    </footer>
+</body>
+
+</html>
