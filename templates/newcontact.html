@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Eelco de Gee | Contact
+{% endblock title %}
+
+{% block content %}
+<div class="flex flex-col text-center w-5/12">
+
+
+    {% if name %}
+    <p>
+        Thank you for your message {{name}}.
+    </p>
+    <p>
+        We will get in contact as soon as possible.
+    </p>
+    {% else%}
+    <div>
+        <form class="flex flex-col text-left" method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.name.label }} {{ form.name() }}
+            {{ form.email.label }} {{ form.email() }}
+            {{ form.message.label }} {{ form.message() }}
+            <p></p>
+            {{ form.submit(class_='bg-primary mt-4') }}
+
+        </form>
+    </div>
+    {% endif %}
+
+
+
+
+</div>
+{% endblock content %}

@@ -1,6 +1,16 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session, redirect, url_for
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField, TextAreaField
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'mysecretkey'
+
+
+class InfoForm(FlaskForm):
+    name = StringField('Name:')
+    email = StringField('Email:')
+    message = TextAreaField('Message:')
+    submit = SubmitField('Sent Email')
 
 
 @app.route('/')
@@ -16,6 +26,22 @@ def about():
 @app.route('/projects')
 def projects():
     return render_template('projects.html')
+
+
+@app.route('/newcontact', methods=['GET', 'POST'])
+def newcontact():
+    name = False
+    form = InfoForm()
+
+    if form.validate_on_submit():
+        name = form.name.data
+        form.name.data = ''
+        email = form.email.data
+        form.email.data = ''
+        message = form.message.data
+        form.message.data = ''
+
+    return render_template('newcontact.html', form=form, name=name)
 
 
 @app.route('/contact')
