@@ -4,3 +4,4 @@ tailwind.config.js
 styles.css
 .vscode/*
 temp.txt
+static/images/heroku-x64.exe
