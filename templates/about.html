@@ -5,5 +5,19 @@ Eelco de Gee | About
 {% set active_page = 'about'  %}
 
 {% block content %}
-<h1>About us</h1>
+<div id="left" class="text-center border-r-4 border-primary border-double pr-4">
+    <h1>More about <span class="text-primary">Eelco</span></h1>
+    <img class="rounded-full" src="{{ url_for('static', filename='images/portrait.jpg') }}" alt="">
+    <p>IT Professional</p>
+</div>
+<div id="right" class="w-2/5 text-left">
+    <h2>My Bio</h2>
+    <p class="text-sm">
+        I am a passionate IT professional, with a background in Service Management and Programming.
+        Of which I use Flask for Backend and HTML/CSS/JS for the frontend.
+        Together with Flask as framework, I also have knowledge in Wordpress, PHP, Laravel and Vue.js
+        <a class="text-primary underline" href="/contact">Send me an email</a>
+        if you like to know more.
+    </p>
+</div>
 {% endblock content %}<h1>Welcome</h1>
